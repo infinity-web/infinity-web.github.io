@@ -169,6 +169,46 @@
 			font-size: 1.2em;
 			margin-right: 20px;
 		}
+		#search{
+			position:fixed;
+			margin-left:1000px;
+			width:1000px;
+			height:300px;
+			margin-top:20px;
+
+
+
+		}
+		#searchbar{
+			width:350px;
+			height:40px;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px; 
+			border-style:solid;
+			border-width:1px;
+			border-right:none;
+			font-size:1.2em;
+			padding-left:5px;
+		}
+		#searchbar:hover{
+			background-color:#ffffff;
+		}
+		#searchbtn{
+			width:150px;
+			height:42px;
+			border-top-right-radius:10px;
+			border-bottom-right-radius:10px; 
+			border-style:solid;
+			border-width:1px;
+			border-left:none;
+			cursor: pointer;
+			font-size:1.2em;
+			background-color:#ffffcc;
+
+		}
+		#searchbtn:hover{
+			background-color:#ffffaa;
+		}
 	</style>
 </head>
 <body bgcolor="#ffffff">
@@ -224,6 +264,22 @@
 			document.getElementById("demo").innerHTML = hours + ":" + mins + ":" + secs;
 		}
 		setInterval(printTime,1000);
+
+		function active(){
+			var searchbar = document.getElementById("searchbar");
+			 if(searchbar.value=="Search..."){
+			 	searchbar.value="";
+			 	searchbar.placeholder = "Search...";
+			 }
+			}
+		function inactive(){
+			var searchbar = document.getElementById("searchbar");
+			 if(searchbar.value==""){
+			 	searchbar.value="Search...";
+			 	searchbar.placeholder = "";
+			 }
+
+		}
 	</script>
     <div id="top">
 		<p>COMMENT HERE</p>
@@ -281,6 +337,12 @@ Ronnie concludes on why Hachi will forever be his hero and his story has clearly
 	<div id="date">
 	<p id="demo"></p>
     </div>
+
+<div id="search">
+	<form action="search.php" method="Post">
+		<input type="text" id="searchbar" placeholder="" value="Search..." maxlength="30" autocomplete="off" onmousedown="active();"" onblur="inactive();" /><input type="submit" id="searchbtn" />
+	</form>
+</div>
    
 
 
