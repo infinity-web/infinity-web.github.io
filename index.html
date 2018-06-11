@@ -2,30 +2,46 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>MY Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Infinite_wallpaper's</title>
 <style type="text/css">
 
  #top {
- 	background-image:url("pattern3.jpg");
+  background-color: #000000;
  	width:100%;
- 	height:5em;
  	margin-top:-0.5em;
  	margin-left:-0.5em;
  	position:fixed;
+  overflow: auto;
+ }
+ #top a{
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
  }
   #category{
-  	background-image:url("pattern.jpg");
+  	background-color: #000000;
+    color:#ffffff;
   	margin-top:4.7em;
-  	margin-left:-0.3em;
+  	margin-left:-9.5em;
   	height:30em;
   	width:10em;
   	position:fixed;
-  	border-radius:20px;
   	box-shadow:2px 3px 10px #000000;
+    transition:margin-left 1s ease;
+    overflow: auto;
+  }
+  #category:hover{
+     margin-left:-0.5em;
+
   }
    #content {
    	position:absolute;
-   	margin-left:11em;
+   	margin-left:7em;
    	margin-top:4.7em;
    	height:100%;
    	width:83em;
@@ -33,7 +49,8 @@
 
    }
   #heading {
-  	text-shadow:3px 1px 5px #000000 , 1px 1px 10px #00ccdd;
+    margin-top:0.3em;
+    margin-left:12em;
   	color:#f8f8f8;
   	opacity:1;
   }
@@ -41,20 +58,38 @@
    	font-size:1.25em;
    	color:#ffffff;
    	opacity:1;
-    margin-left:10px;
+    align-content: center;
+    transition: background-color .3s,color .1s;
+   }
+   #type a{
+    color: #ffffff;
+   }
+   #type a:hover{
+    color:#000000;
+    font-weight: bold;
    }
    #type:hover{
-   	background-color:#55ff55;
+   	background-color:#ffffff;
+    color:#000000;
    	cursor:pointer;
    }
    #image{
    	width:18em;
    	height:13em;
-   	background-color:#e0e0e0;
-   	border-radius:6px;
+   	background-color:#ececec;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius: 6px;
    	display: inline-block;
    	margin-right:2em;
    	margin-top:2em;
+   }
+   #image p{
+    float: left;
+    margin-top: -0.3em;
+   }
+   #image p img{
+    width:2.5em;
+    height:2.5em;
    }
    #image_under{
    	height:10em;
@@ -62,9 +97,10 @@
    	border-radius:20px;
    	margin-left:0.5em;
    	margin-top: 0.5em;
-   	float: left;
+    transition:transform .5s;
    }
    #image_under:hover{
+    transform: scale(1.5);
    	box-shadow: 2px 2px 10px #000000;
    }
    a{
@@ -140,74 +176,76 @@
 </style>
 
 </head>
-<body background="space.jpg" onload="underdevelopment()">
+<body bgcolor="#ffffff">
 
 	
 	<div id="content">
-		<h1 id="heading">Highest Rated.</h1>
+		<h1>Highest Rated</h1>
 
 		<div id="image">
 			<img src="sky.jpg" id="image_under">
 			<center>
-			<a href="sky.jpg" download><p>Download</p></a>
+			<a href="sky.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="gradient_pink.jpg" id="image_under">
 			<center>
-			<a href="gradient_pink.jpg" download><p>Download</p></a>
+			<a href="gradient_pink.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="pattern2.jpg" id="image_under">
 			<center>
-			<a href="pattern2.jpg" download><p>Download</p></a>
+			<a href="pattern2.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="redsky.jpg" id="image_under">
 			<center>
-			<a href="redsky.jpg" download><p>Download</p></a>
+			<a href="redsky.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="newmango.jpg" id="image_under">
 			<center>
-			<a href="newmango.jpg" download><p>Download</p></a>
+			<a href="newmango.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="hny_2018.jpg" id="image_under">
 			<center>
-			<a href="hny_2018.jpg" download><p>Download</p></a>
+			<a href="hny_2018.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="tiranga.jpg" id="image_under">
 			<center>
-			<a href="tiranga.jpg" download><p>Download</p></a>
+			<a href="tiranga.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 	    <div id="image">
 			<img src="donut.jpg" id="image_under">
 			<center>
-			<a href="donut.jpg" download><p>Download</p></a>
+			<a href="donut.jpg" download><p><img src="dbtn.png"></p></a>
 			</center>
 	    </div>
 
 	</div>
 	<div id="category">
-	  <center><h2 id="heading">Category</h2></center>
+	  <center><h2>Category</h2></center>
 		<center><p id="type"><a href="cute.html">Cute</a></p>
 		<p id="type"><a href="cute.html">Nature</p>
 		<p id="type"><a href="cute.html">3D Effect</a></p>
 		<p id="type"><a href="cute.html">Space</a></p>
-    <p id="type"><a href="moviesinfinity.html">Next Website</a></p>
+    <p id="type"><a href="moviesinfinity.html">Next <br>Website</a></p>
     </center>
 	</div>
 
 	<div id="top">
-		<center><h1 id="heading">Infinite wallpaper's</h1></center>
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-list"></i></a>
+	<h1 id="heading">Infinite Wallpaper</h1>
 	</div>
 </body>
 </html>
