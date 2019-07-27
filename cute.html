@@ -2,109 +2,176 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>MY Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Infinite_wallpaper's</title>
 <style type="text/css">
 
  #top {
- 	background-image:url("pattern3.jpg");
+  background-color: #000000;
  	width:100%;
- 	height:5em;
  	margin-top:-0.5em;
  	margin-left:-0.5em;
  	position:fixed;
+  overflow: auto;
  }
-  #category{
-  	background-image:url("pattern.jpg");
-  	margin-top:4.7em;
-  	margin-left:-0.9em;
-  	height:30em;
-  	width:10em;
-  	position:fixed;
-  	border-radius:20px;
-  	box-shadow:2px 3px 10px #000000;
-  }
+ #top a{
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+ }
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top:50px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.sidenav h1 {
+  color: #fefefe;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#content {
+    transition: margin-left .5s;
+    padding:10px;
+    padding-left:6.5em;
+}
+
    #content {
    	position:absolute;
-   	margin-left:11em;
+   	margin-left:0em;
    	margin-top:4.7em;
    	height:100%;
-   	width:83em;
-   	border-radius:20px;
-
+   	width:100%;
+   	border-radius:1em;
+    overflow-x:visible;
+    overflow-y: visible; 
    }
   #heading {
-  	text-shadow:3px 1px 5px #000000 , 1px 1px 10px #00ccdd;
+    margin-top:0.3em;
+    margin-left:12em;
   	color:#f8f8f8;
   	opacity:1;
   }
    #type {
-   	font-size:1.5em;
+   	font-size:1.25em;
    	color:#ffffff;
    	opacity:1;
+    align-content: center;
+    transition: background-color .3s,color .1s;
+   }
+   #type a{
+    color: #ffffff;
+   }
+   #type a:hover{
+    color:#000000;
+    font-weight: bold;
    }
    #type:hover{
-   	background-color:#ff2266;
+   	background-color:#ffffff;
+    color:#000000;
    	cursor:pointer;
    }
-   #image{
+   #image{   
    	width:18em;
-   	height:12em;
-   	background-color:#e0e0e0;
-   	border-radius:6px;
+   	height:13em;
+   	background-color:#ffffff;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius: 6px;
    	display: inline-block;
    	margin-right:2em;
    	margin-top:2em;
    }
+   #image p{
+    float: left;
+    margin-top: -0.3em;
+   }
+   #image p img{
+    width:2.5em;
+    height:2.5em;
+   }
    #image_under{
-   	height:11em;
+   	height:10em;
    	width: 17em;
    	border-radius:20px;
    	margin-left:0.5em;
    	margin-top: 0.5em;
-   	float: left;
+    transition:transform .5s;
    }
    #image_under:hover{
+    transform: scale(1.5);
    	box-shadow: 2px 2px 10px #000000;
    }
    a{
    	font-size:1.2em;
    	text-decoration:none;
-    color:blue;
    }
+   #demo{
+      font-size:30px;
+      margin-top:5px;
+      color:#ffffff;
+    }
+    #date{
+      margin-left:1300px;
+      position: fixed;
+      cursor:default;
+    }
 
-@media screen and (max-width:719px) {
+@media screen and (max-width:415px) and (min-width:320px) {
 	 #top {
- 	background-image:url("pattern3.jpg");
+ 	background-color:#000000;
  	width:100%;
- 	height:5em;
+ 	height:3em;
  	margin-top:-0.5em;
  	margin-left:-0.5em;
  	position:fixed;
- 	box-shadow:2px 3px 10px #000000;
  }
-	#category{
-  	background-image:url("pattern.jpg");
-  	margin-top:4.5em;
-  	height:6.3em;
-  	margin-left:-8px;
-  	width:100%;
-  	position:fixed;
-  	border-radius:5px;
-  	box-shadow:2px 3px 10px #000000;
-  }
-  #category p{
-  	display: inline-block;
-  	margin-top:-1em;
-  	margin-right:0.2em;
-  	border-width:2px;
-  	border-top-left-radius:6px;
-  	border-bottom-right-radius:6px;
-  	border-style:double;
-  	background-color:#3388ee;
-  }
+  #top a{
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 24px;
+ }
   #content {
    	position:absolute;
-   	margin-top:10em;
+   	margin-top:2em;
    	margin-left:3.5em;
    	height:100%;
    	width:100%;
@@ -121,7 +188,7 @@
    	margin-top:2em;
    }
   #image_under{
-   	height:13em;
+   	height:10em;
    	width: 17em;
    	border-radius:20px;
    	margin-left:0.5em;
@@ -131,45 +198,152 @@
    #image_under:hover{
    	box-shadow: 2px 2px 10px #000000;
    }
-   #over{
-    margin-top:-100em;
+   #type{
+    font-size:90%;
+    border-style: solid;
+    margin-left:1px;
    }
-   #dbutton{
-    height: 5em;
-    width: 5em;
-   }
+   #heading {
+    margin-top:0.3em;
+    margin-left:5em;
+    font-size:21px;
+    color:#f8f8f8;
+    opacity:1;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a{
+    font-size: 18px;
+  }
+
+
+}
 </style>
 
 </head>
-<body background="space.jpg" onload="underdevelopment()">
+<body bgcolor="#efefef">
 
 	
 	<div id="content">
-		<h1 id="heading">Cute</h1>
+		<h1>Highest Rated</h1>
 
 		<div id="image">
-			<h1>
-        Nothing to Display!!!
-      </h1>
+			<img src="c1.jpg" id="image_under">
+			<center>
+			<a href="c1.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
 	    </div>
+	    <div id="image">
+			<img src="c2.jpg" id="image_under">
+			<center>
+			<a href="c2.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c3.jpg" id="image_under">
+			<center>
+			<a href="c3.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c4.jpg" id="image_under">
+			<center>
+			<a href="c4.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c5.jpg" id="image_under">
+			<center>
+			<a href="c5.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c6.jpg" id="image_under">
+			<center>
+			<a href="c6.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c7.jpg" id="image_under">
+			<center>
+			<a href="c7.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+	    <div id="image">
+			<img src="c8.jpg" id="image_under">
+			<center>
+			<a href="c8.jpg" download><p><img src="dbtn.png"></p></a>
+			</center>
+	    </div>
+
 	</div>
-	<div id="category">
-		<center><h2 id="heading">Category</h2>
-		<p id="type"><a href="cute.html">Cute</a></p>
-		<p id="type"><a href="cute.html">Nature</a></p>
-		<p id="type"><a href="cute.html">3D Effect</a></p>
-		<p id="type"><a href="cute.html">Space</a></p>
-		</center>
+	<div id="category" class="sidenav">
+	 <h1>Category</h1>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href ="cute.html">Cute</a>
+		<a href="nature.html">Nature</a>
+		<a href="entertain.html">Entertainment</a>
+		<a href="space.html">Space</a>
+    <a href ="index.html">Highest Rated</a>
 	</div>
 
 	<div id="top">
-		<center><h1 id="heading">Infinity wallpaper</h1></center>
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+  <a href="#" onclick="openNav()"><i class="fa fa-list"></i></a>
+	<h1 id="heading">Infinite Wallpaper</h1>
 	</div>
 
-	<script type="text/javascript">
-		function underdevelopment(){
-			alert ("This website is in Developing stage.")
-		}
-    </script>
+<script type="text/javascript">
+    function printTime(){
+      var d = new Date();
+      var hours = d.getHours();
+      var t;
+      if(hours <= 12)
+      {
+        hours = hours;
+        t=1;
+
+      }
+      else
+      {
+        hours = hours - 12;
+        t=0;
+      }
+      var mins = d.getMinutes();
+      var secs = d.getSeconds();
+      if(t==0)
+      {
+      document.getElementById("demo").innerHTML = hours + ":" + mins + ":" + secs +" " + "PM";
+      }
+      else
+      {
+      document.getElementById("demo").innerHTML = hours + ":" + mins + ":" + secs + " " + "AM"; 
+      }
+    }
+    setInterval(printTime,1000);
+  </script>
+
+  <div id="date">
+  <p id="demo"></p>
+    </div>
+
+
+  <script>
+function openNav() {
+    document.getElementById("category").style.width = "350px";
+    document.getElementById("content").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("category").style.width = "0";
+    document.getElementById("content").style.marginLeft= "0";
+    document.body.style.backgroundColor= "rgb(238,238,238)";
+}
+function load_cute() {
+     document.getElementById("content").innerHTML='<object type="text/html" data="cute.html" ></object>';
+}
+</script>
 </body>
 </html>

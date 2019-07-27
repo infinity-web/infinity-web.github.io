@@ -38,7 +38,7 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top:50px;
 }
 
 .sidenav a {
@@ -47,7 +47,10 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: .3s;
+}
+.sidenav h1 {
+  color: #fefefe;
 }
 
 .sidenav a:hover {
@@ -64,17 +67,19 @@ body {
 
 #content {
     transition: margin-left .5s;
-    padding: 16px;
+    padding:10px;
+    padding-left:6.5em;
 }
 
    #content {
    	position:absolute;
-   	margin-left:7em;
+   	margin-left:0em;
    	margin-top:4.7em;
    	height:100%;
-   	width:83em;
-   	border-radius:20px;
-
+   	width:100%;
+   	border-radius:1em;
+    overflow-x:visible;
+    overflow-y: visible; 
    }
   #heading {
     margin-top:0.3em;
@@ -101,10 +106,10 @@ body {
     color:#000000;
    	cursor:pointer;
    }
-   #image{
+   #image{   
    	width:18em;
    	height:13em;
-   	background-color:#ececec;
+   	background-color:#ffffff;
     border-bottom-left-radius:6px;
     border-bottom-right-radius: 6px;
    	display: inline-block;
@@ -135,6 +140,16 @@ body {
    	font-size:1.2em;
    	text-decoration:none;
    }
+   #demo{
+      font-size:30px;
+      margin-top:5px;
+      color:#ffffff;
+    }
+    #date{
+      margin-left:1300px;
+      position: fixed;
+      cursor:default;
+    }
 
 @media screen and (max-width:415px) and (min-width:320px) {
 	 #top {
@@ -207,7 +222,7 @@ body {
 </style>
 
 </head>
-<body bgcolor="#ffffff">
+<body bgcolor="#efefef">
 
 	
 	<div id="content">
@@ -266,21 +281,57 @@ body {
 	<div id="category" class="sidenav">
 	 <h1>Category</h1>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="cute.html">Cute</a>
-		<a href="cute.html">Nature</a>
-		<a href="cute.html">3D Effect</a>
-		<a href="cute.html">Space</a>
-    <a href="moviesinfinity.html">Next Website</a>
+    <a href ="cute.html">Cute</a>
+		<a href="nature.html">Nature</a>
+		<a href="entertain.html">Entertainment</a>
+		<a href="space.html">Space</a>
+    <a href ="index.html">Highest Rated</a>
 	</div>
 
 	<div id="top">
-  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a>
   <a href="#" onclick="openNav()"><i class="fa fa-list"></i></a>
 	<h1 id="heading">Infinite Wallpaper</h1>
 	</div>
+
+<script type="text/javascript">
+    function printTime(){
+      var d = new Date();
+      var hours = d.getHours();
+      var t;
+      if(hours <= 12)
+      {
+        hours = hours;
+        t=1;
+
+      }
+      else
+      {
+        hours = hours - 12;
+        t=0;
+      }
+      var mins = d.getMinutes();
+      var secs = d.getSeconds();
+      if(t==0)
+      {
+      document.getElementById("demo").innerHTML = hours + ":" + mins + ":" + secs +" " + "PM";
+      }
+      else
+      {
+      document.getElementById("demo").innerHTML = hours + ":" + mins + ":" + secs + " " + "AM"; 
+      }
+    }
+    setInterval(printTime,1000);
+  </script>
+
+  <div id="date">
+  <p id="demo"></p>
+    </div>
+
+
   <script>
 function openNav() {
-    document.getElementById("category").style.width = "250px";
+    document.getElementById("category").style.width = "350px";
     document.getElementById("content").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
@@ -288,7 +339,10 @@ function openNav() {
 function closeNav() {
     document.getElementById("category").style.width = "0";
     document.getElementById("content").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor= "rgb(238,238,238)";
+}
+function load_cute() {
+     document.getElementById("content").innerHTML='<object type="text/html" data="cute.html" ></object>';
 }
 </script>
 </body>
